@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio | Desarrollo de Software</title>
+  <meta name="description" content="Portafolio de proyectos de desarrollo de software.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 20px 8%;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    nav a {
+      color: #475569;
+      text-decoration: none;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #0f172a;
+      font-size: 20px;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 24px 45px;
+    }
+
+    .etiqueta {
+      color: #0d9488;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+      margin: 15px 0;
+      color: #0f172a;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #64748b;
+      font-size: 17px;
+    }
+
+    .proyectos {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px 24px 80px;
+    }
+
+    .encabezado {
+      margin-bottom: 25px;
+    }
+
+    .encabezado h2 {
+      font-size: 28px;
+      color: #0f172a;
+    }
+
+    .encabezado p {
+      color: #64748b;
+      margin-top: 5px;
+    }
+
+    .rejilla {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit, minmax(min(100%, 280px), 360px)
+      );
+      gap: 24px;
+    }
+
+    .tarjeta {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px #0f172a12;
+    }
+
+    .portada {
+      height: 190px;
+      background: linear-gradient(135deg, #ccfbf1, #e0f2fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #115e59;
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    .contenido {
+      padding: 24px;
+    }
+
+    .contenido h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .contenido p {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .tecnologias {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .tecnologias span {
+      background: #f1f5f9;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #475569;
+    }
+
+    .boton {
+      display: inline-block;
+      background: #0f766e;
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .boton:hover {
+      background: #115e59;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="#">Mi Portafolio.</a>
+      <a href="#proyectos">Proyectos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="etiqueta">Portafolio de desarrollo</span>
+      <h1>Hola, bienvenida a mi portafolio.</h1>
+      <p>
+        Soy egresada de Ingeniería en Desarrollo y Gestión
+        de Software. Aquí comparto mis proyectos, las
+        tecnologías que utilizo y lo que voy aprendiendo.
+      </p>
+    </section>
+
+    <section class="proyectos" id="proyectos">
+      <div class="encabezado">
+        <h2>Mis proyectos</h2>
+        <p>Una selección de mis trabajos de desarrollo.</p>
+      </div>
+
+      <div class="rejilla">
+
+        <!-- Proyecto 1: FanPage -->
+        <article class="tarjeta">
+          <div class="portada">
+            FanPage
+          </div>
+
+          <div class="contenido">
+            <h3>FanPage</h3>
+            <p>
+              Página web de práctica desarrollada con
+              HTML. Consulta el proyecto publicado
+              directamente desde tu navegador.
+            </p>
+
+            <div class="tecnologias">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>GitHub Pages</span>
+            </div>
+
+            <a
+              class="boton"
+              href="https://7Marilu7.github.io/FanPage/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver página web ↗
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Portafolio de Desarrollo de Software
+  </footer>
+</body>
+</html>
