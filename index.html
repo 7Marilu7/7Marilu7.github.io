@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio | Desarrollo de Software</title>
   <meta name="description" content="Portafolio de proyectos de desarrollo de software.">
+
   <style>
     * {
       box-sizing: border-box;
@@ -14,14 +16,14 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
+      background: #fff8fa;
+      color: #374151;
       line-height: 1.6;
     }
 
     header {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
+      background: #ffffff;
+      border-bottom: 1px solid #f3dce4;
       padding: 20px 8%;
     }
 
@@ -35,13 +37,17 @@
     }
 
     nav a {
-      color: #475569;
+      color: #805568;
       text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #c05b82;
     }
 
     .logo {
       font-weight: bold;
-      color: #0f172a;
+      color: #9d456b;
       font-size: 20px;
     }
 
@@ -52,7 +58,7 @@
     }
 
     .etiqueta {
-      color: #0d9488;
+      color: #c05b82;
       font-weight: bold;
       font-size: 13px;
       text-transform: uppercase;
@@ -63,12 +69,12 @@
       font-size: clamp(32px, 5vw, 48px);
       line-height: 1.2;
       margin: 15px 0;
-      color: #0f172a;
+      color: #713f56;
     }
 
     .hero p {
       max-width: 600px;
-      color: #64748b;
+      color: #806b77;
       font-size: 17px;
     }
 
@@ -84,11 +90,11 @@
 
     .encabezado h2 {
       font-size: 28px;
-      color: #0f172a;
+      color: #713f56;
     }
 
     .encabezado p {
-      color: #64748b;
+      color: #806b77;
       margin-top: 5px;
     }
 
@@ -101,8 +107,8 @@
     }
 
     .tarjeta {
-      background: white;
-      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      border: 1px solid #f0d9e2;
       border-radius: 16px;
       overflow: hidden;
       transition: transform 0.2s, box-shadow 0.2s;
@@ -110,18 +116,25 @@
 
     .tarjeta:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px #0f172a12;
+      box-shadow: 0 12px 30px #9d456b18;
     }
 
     .portada {
       height: 190px;
-      background: linear-gradient(135deg, #ccfbf1, #e0f2fe);
+      background: linear-gradient(135deg, #f9dce7, #fcecf2);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #115e59;
+      color: #9d456b;
       font-size: 27px;
       font-weight: bold;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .portada.quiniela {
+      background: linear-gradient(135deg, #d8eee5, #e8f4ed);
+      color: #356b58;
     }
 
     .contenido {
@@ -131,10 +144,11 @@
     .contenido h3 {
       font-size: 21px;
       margin-bottom: 8px;
+      color: #713f56;
     }
 
     .contenido p {
-      color: #64748b;
+      color: #806b77;
       font-size: 14px;
       margin-bottom: 18px;
     }
@@ -147,34 +161,46 @@
     }
 
     .tecnologias span {
-      background: #f1f5f9;
+      background: #fff0f5;
       padding: 5px 10px;
       border-radius: 6px;
       font-size: 12px;
-      color: #475569;
+      color: #87546b;
     }
 
     .boton {
       display: inline-block;
-      background: #0f766e;
+      background: #c05b82;
       color: white;
       text-decoration: none;
       padding: 10px 16px;
       border-radius: 8px;
       font-size: 14px;
       font-weight: bold;
+      transition: background 0.2s;
     }
 
     .boton:hover {
-      background: #115e59;
+      background: #9d456b;
     }
 
     footer {
       text-align: center;
       padding: 25px;
-      border-top: 1px solid #e2e8f0;
-      color: #64748b;
+      border-top: 1px solid #f3dce4;
+      color: #806b77;
       font-size: 13px;
+      background: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 55px;
+      }
+
+      .rejilla {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -216,7 +242,7 @@
             <h3>FanPage</h3>
             <p>
               Página web de práctica desarrollada con
-              HTML. Consulta el proyecto publicado
+              HTML y CSS. Consulta el proyecto publicado
               directamente desde tu navegador.
             </p>
 
@@ -229,6 +255,38 @@
             <a
               class="boton"
               href="https://7Marilu7.github.io/FanPage/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver página web ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: Quiniela México 77 -->
+        <article class="tarjeta">
+          <div class="portada quiniela">
+            Quiniela México 77
+          </div>
+
+          <div class="contenido">
+            <h3>Quiniela México 77</h3>
+            <p>
+              Aplicación web de quinielas deportivas que permite
+              gestionar partidos, registrar predicciones y
+              consultar resultados mediante una base de datos.
+            </p>
+
+            <div class="tecnologias">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+            <a
+              class="boton"
+              href="https://quinielamexico77.lovestoblog.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
