@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio | Desarrollo de Software</title>
   <meta name="description" content="Portafolio de proyectos de desarrollo de software.">
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: Arial, sans-serif;
       background: #fff8fa;
@@ -25,7 +28,7 @@
     }
 
     nav {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: auto;
       display: flex;
       justify-content: space-between;
@@ -50,7 +53,7 @@
     }
 
     .hero {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: auto;
       padding: 75px 24px 45px;
     }
@@ -77,7 +80,7 @@
     }
 
     .proyectos {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: auto;
       padding: 20px 24px 55px;
       scroll-margin-top: 20px;
@@ -97,19 +100,21 @@
       margin-top: 5px;
     }
 
+    /* Cuatro tarjetas por fila en pantallas grandes */
     .rejilla {
       display: grid;
-      grid-template-columns: repeat(
-        auto-fit, minmax(min(100%, 280px), 340px)
-      );
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 24px;
     }
 
     .tarjeta {
+      min-width: 0;
       background: #fff;
       border: 1px solid #f0d9e2;
       border-radius: 16px;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
@@ -141,6 +146,11 @@
       color: #805583;
     }
 
+    .portada.vr {
+      background: linear-gradient(135deg, #dfe7fb, #eee5fa);
+      color: #62558e;
+    }
+
     .portada.proximo {
       background: linear-gradient(135deg, #fcecf2, #f8e8ed);
       color: #b78398;
@@ -149,6 +159,9 @@
 
     .contenido {
       padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .contenido h3 {
@@ -180,6 +193,8 @@
 
     .boton {
       display: inline-block;
+      align-self: flex-start;
+      margin-top: auto;
       background: #c05b82;
       color: #fff;
       text-decoration: none;
@@ -196,6 +211,8 @@
 
     .boton-inactivo {
       display: inline-block;
+      align-self: flex-start;
+      margin-top: auto;
       background: #f4e5eb;
       color: #9d7184;
       padding: 10px 16px;
@@ -213,9 +230,37 @@
       background: #fff;
     }
 
+    /* Pantallas medianas: tres tarjetas */
+    @media (max-width: 1100px) {
+      .rejilla {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    /* Tabletas: dos tarjetas */
+    @media (max-width: 850px) {
+      .rejilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+    }
+
+    /* Celulares: una tarjeta */
     @media (max-width: 600px) {
+      header {
+        padding: 18px 6%;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
       .hero {
-        padding-top: 55px;
+        padding: 55px 24px 35px;
+      }
+
+      .proyectos {
+        padding: 20px 24px 45px;
       }
 
       .rejilla {
@@ -252,6 +297,7 @@
       </div>
 
       <div class="rejilla">
+
         <article class="tarjeta">
           <div class="portada">
             FanPage
@@ -280,6 +326,7 @@
             </a>
           </div>
         </article>
+
         <article class="tarjeta">
           <div class="portada quiniela">
             Quiniela México 77
@@ -299,6 +346,7 @@
               <span>HTML</span>
               <span>CSS</span>
             </div>
+
             <a
               class="boton"
               href="https://quinielamexico77.lovestoblog.com/"
@@ -310,7 +358,6 @@
           </div>
         </article>
 
-        <!-- Plantilla para una futura página web -->
         <article class="tarjeta">
           <div class="portada proximo">
             Próximo proyecto web
@@ -341,6 +388,7 @@
       </div>
 
       <div class="rejilla">
+
         <article class="tarjeta">
           <div class="portada serenidad">
             Serenidad
@@ -358,6 +406,7 @@
               <span>Android</span>
               <span>Kotlin</span>
             </div>
+
             <a
               class="boton"
               href="https://7Marilu7.github.io/Serenidad.pdf"
@@ -369,7 +418,34 @@
           </div>
         </article>
 
-        <!-- Plantilla para una futura aplicación Android -->
+        <article class="tarjeta">
+          <div class="portada vr">
+            Simulación Gafas VR
+          </div>
+
+          <div class="contenido">
+            <h3>Simulador de Gafas VR</h3>
+            <p>
+              Proyecto Android que simula el uso de gafas de realidad
+              virtual. Consulta el repositorio para conocer su código.
+            </p>
+
+            <div class="tecnologias">
+              <span>Android Studio</span>
+              <span>Realidad virtual</span>
+            </div>
+
+            <a
+              class="boton"
+              href="https://github.com/7Marilu7/GafasVR.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver aplicación ↗
+            </a>
+          </div>
+        </article>
+
         <article class="tarjeta">
           <div class="portada proximo">
             Próxima app Android
