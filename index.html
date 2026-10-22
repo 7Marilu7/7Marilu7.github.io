@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio | Desarrollo de Software</title>
   <meta name="description" content="Portafolio de proyectos de desarrollo de software.">
-
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: Arial, sans-serif;
       background: #fff8fa;
@@ -22,7 +19,7 @@
     }
 
     header {
-      background: #ffffff;
+      background: #fff;
       border-bottom: 1px solid #f3dce4;
       padding: 20px 8%;
     }
@@ -34,6 +31,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 16px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -81,7 +79,8 @@
     .proyectos {
       max-width: 1100px;
       margin: auto;
-      padding: 20px 24px 80px;
+      padding: 20px 24px 55px;
+      scroll-margin-top: 20px;
     }
 
     .encabezado {
@@ -101,13 +100,13 @@
     .rejilla {
       display: grid;
       grid-template-columns: repeat(
-        auto-fit, minmax(min(100%, 280px), 360px)
+        auto-fit, minmax(min(100%, 280px), 340px)
       );
       gap: 24px;
     }
 
     .tarjeta {
-      background: #ffffff;
+      background: #fff;
       border: 1px solid #f0d9e2;
       border-radius: 16px;
       overflow: hidden;
@@ -120,13 +119,13 @@
     }
 
     .portada {
-      height: 190px;
+      height: 170px;
       background: linear-gradient(135deg, #f9dce7, #fcecf2);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #9d456b;
-      font-size: 27px;
+      font-size: 25px;
       font-weight: bold;
       text-align: center;
       padding: 15px;
@@ -135,6 +134,17 @@
     .portada.quiniela {
       background: linear-gradient(135deg, #d8eee5, #e8f4ed);
       color: #356b58;
+    }
+
+    .portada.serenidad {
+      background: linear-gradient(135deg, #f1dce9, #e9e0f5);
+      color: #805583;
+    }
+
+    .portada.proximo {
+      background: linear-gradient(135deg, #fcecf2, #f8e8ed);
+      color: #b78398;
+      font-size: 21px;
     }
 
     .contenido {
@@ -171,7 +181,7 @@
     .boton {
       display: inline-block;
       background: #c05b82;
-      color: white;
+      color: #fff;
       text-decoration: none;
       padding: 10px 16px;
       border-radius: 8px;
@@ -184,13 +194,23 @@
       background: #9d456b;
     }
 
+    .boton-inactivo {
+      display: inline-block;
+      background: #f4e5eb;
+      color: #9d7184;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
       border-top: 1px solid #f3dce4;
       color: #806b77;
       font-size: 13px;
-      background: #ffffff;
+      background: #fff;
     }
 
     @media (max-width: 600px) {
@@ -209,14 +229,15 @@
   <header>
     <nav>
       <a class="logo" href="#">Mi Portafolio.</a>
-      <a href="#proyectos">Proyectos</a>
+      <a href="#paginas">Páginas web</a>
+      <a href="#apps-android">Apps Android</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
       <span class="etiqueta">Portafolio de desarrollo</span>
-      <h1>Hola, bienvenida a mi portafolio.</h1>
+      <h1>Hola, bienvenid@ a mi portafolio digital.</h1>
       <p>
         Soy egresada de Ingeniería en Desarrollo y Gestión
         de Software. Aquí comparto mis proyectos, las
@@ -224,15 +245,13 @@
       </p>
     </section>
 
-    <section class="proyectos" id="proyectos">
+    <section class="proyectos" id="paginas">
       <div class="encabezado">
-        <h2>Mis proyectos</h2>
-        <p>Una selección de mis trabajos de desarrollo.</p>
+        <h2>Páginas</h2>
+        <p>Proyectos web y sistemas desarrollados.</p>
       </div>
 
       <div class="rejilla">
-
-        <!-- Proyecto 1: FanPage -->
         <article class="tarjeta">
           <div class="portada">
             FanPage
@@ -241,9 +260,8 @@
           <div class="contenido">
             <h3>FanPage</h3>
             <p>
-              Página web de práctica desarrollada con
-              HTML y CSS. Consulta el proyecto publicado
-              directamente desde tu navegador.
+              Página web de práctica desarrollada con HTML y CSS,
+              publicada mediante GitHub Pages.
             </p>
 
             <div class="tecnologias">
@@ -262,8 +280,6 @@
             </a>
           </div>
         </article>
-
-        <!-- Proyecto 2: Quiniela México 77 -->
         <article class="tarjeta">
           <div class="portada quiniela">
             Quiniela México 77
@@ -272,9 +288,8 @@
           <div class="contenido">
             <h3>Quiniela México 77</h3>
             <p>
-              Aplicación web de quinielas deportivas que permite
-              gestionar partidos, registrar predicciones y
-              consultar resultados mediante una base de datos.
+              Aplicación web de quinielas deportivas para registrar
+              predicciones, gestionar partidos y consultar resultados.
             </p>
 
             <div class="tecnologias">
@@ -292,6 +307,86 @@
             >
               Ver página web ↗
             </a>
+          </div>
+        </article>
+
+        <!-- Plantilla para una futura página web -->
+        <article class="tarjeta">
+          <div class="portada proximo">
+            Próximo proyecto web
+          </div>
+
+          <div class="contenido">
+            <h3>Nuevo proyecto</h3>
+            <p>
+              Próximamente agregaré aquí otro de mis proyectos
+              de desarrollo web.
+            </p>
+
+            <div class="tecnologias">
+              <span>Por definir</span>
+            </div>
+
+            <span class="boton-inactivo">Próximamente</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="proyectos" id="apps-android">
+      <div class="encabezado">
+        <h2>Apps Android</h2>
+        <p>Aplicaciones móviles y sus principales funcionalidades.</p>
+      </div>
+
+      <div class="rejilla">
+        <article class="tarjeta">
+          <div class="portada serenidad">
+            Serenidad
+          </div>
+
+          <div class="contenido">
+            <h3>Serenidad</h3>
+            <p>
+              Aplicación móvil enfocada en el bienestar emocional.
+              Consulta su presentación visual para conocer sus
+              pantallas y funcionalidades.
+            </p>
+
+            <div class="tecnologias">
+              <span>Android</span>
+              <span>Kotlin</span>
+            </div>
+            <a
+              class="boton"
+              href="AQUI_VA_EL_LINK_DEL_PDF"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver aplicación ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Plantilla para una futura aplicación Android -->
+        <article class="tarjeta">
+          <div class="portada proximo">
+            Próxima app Android
+          </div>
+
+          <div class="contenido">
+            <h3>Nueva aplicación</h3>
+            <p>
+              Próximamente agregaré aquí otra aplicación móvil,
+              sus características y una muestra de sus pantallas.
+            </p>
+
+            <div class="tecnologias">
+              <span>Por definir</span>
+            </div>
+
+            <span class="boton-inactivo">Próximamente</span>
           </div>
         </article>
 
