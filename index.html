@@ -391,6 +391,76 @@
         outline: 3px solid #9d456b;
         outline-offset: 3px;
       }
+    
+    .habilidades, .sobre-mi {
+      max-width: 1300px;
+      margin: auto;
+      padding: 35px 24px 55px;
+      scroll-margin-top: 30px;
+    }
+    .rejilla-habilidades {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .tarjeta-habilidad, .tarjeta-experiencia {
+      background: #fff;
+      border: 1px solid #f0d9e2;
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .tarjeta-habilidad h3, .tarjeta-experiencia h3 {
+      color: #713f56;
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+    .tarjeta-habilidad p, .tarjeta-experiencia p {
+      color: #806b77;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    .lista-habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .lista-habilidades span {
+      background: #fff0f5;
+      color: #87546b;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .experiencia-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .periodo-experiencia {
+      display: inline-block;
+      color: #9d456b;
+      background: #fff0f5;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .sobre-mi-intro {
+      max-width: 850px;
+      color: #806b77;
+      margin-bottom: 25px;
+    }
+    @media (max-width: 850px) {
+      .rejilla-habilidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 600px) {
+      .rejilla-habilidades, .experiencia-grid {
+        grid-template-columns: 1fr;
+      }
+    }
       .foto-perfil{
         display:block;
         width:100%;
@@ -625,6 +695,87 @@
           </div>
         </article>
 
+      </div>
+    </section>
+    
+    <section class="habilidades" id="habilidades">
+      <div class="encabezado">
+        <h2>Mis habilidades</h2>
+        <p>Conocimientos y herramientas que utilizo en desarrollo de software y soporte técnico.</p>
+      </div>
+      <div class="rejilla-habilidades">
+        <article class="tarjeta-habilidad">
+          <h3>Desarrollo web</h3>
+          <p>Creación de páginas web y sistemas para gestionar información.</p>
+          <div class="lista-habilidades">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>React básico</span>
+          </div>
+        </article>
+        <article class="tarjeta-habilidad">
+          <h3>Bases de datos y herramientas</h3>
+          <p>Gestión de información y herramientas para desarrollar proyectos.</p>
+          <div class="lista-habilidades">
+            <span>MySQL</span>
+            <span>SQL</span>
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Visual Studio Code</span>
+            <span>Android Studio</span>
+            <span>Kotlin</span>
+            <span>XAMPP</span>
+          </div>
+        </article>
+        <article class="tarjeta-habilidad">
+          <h3>Soporte técnico</h3>
+          <p>Conocimientos prácticos adquiridos durante mis prácticas profesionales.</p>
+          <div class="lista-habilidades">
+            <span>Mantenimiento de equipos</span>
+            <span>Apoyo a usuarios</span>
+            <span>Gestión de información</span>
+            <span>Microsoft Office</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sobre-mi" id="sobre-mi">
+      <div class="encabezado">
+        <h2>Sobre mí</h2>
+      </div>
+      <p class="sobre-mi-intro">
+        Soy egresada de Ingeniería en Desarrollo y Gestión de Software.
+        Cuento con experiencia práctica adquirida durante mis prácticas
+        profesionales en áreas de Gobierno Digital y Desarrollo de Sistemas.
+        Me interesa seguir creciendo profesionalmente en desarrollo de
+        software y soporte técnico, aportando soluciones y aprendiendo
+        nuevas tecnologías.
+      </p>
+      <div class="experiencia-grid">
+        <article class="tarjeta-experiencia">
+          <span class="periodo-experiencia">Prácticas profesionales · 4 meses</span>
+          <h3>Ayuntamiento de Tlazala</h3>
+          <p><strong>Gobierno Digital / Catastro</strong></p>
+          <p>
+            Colaboré en un proyecto de digitalización y consulta de expedientes,
+            con búsqueda por número de expediente o nombre y acceso a documentos
+            PDF. También apoyé en el manejo de registros en Excel, el mantenimiento
+            de equipos y la atención ocasional a usuarios.
+          </p>
+        </article>
+        <article class="tarjeta-experiencia">
+          <span class="periodo-experiencia">Prácticas profesionales · 4 meses</span>
+          <h3>Ayuntamiento de Tlalnepantla</h3>
+          <p><strong>Gobierno Digital / Desarrollo de Sistemas</strong></p>
+          <p>
+            Participé en la planeación de proyectos y desarrollé una aplicación
+            Android para simular pagos de servicios municipales, junto con un
+            panel administrativo conectado a la aplicación.
+          </p>
+        </article>
       </div>
     </section>
     <section class="contacto" id="contacto">
