@@ -51,32 +51,168 @@
       font-size: 20px;
     }
 
-    .hero {
-      max-width: 1300px;
-      margin: auto;
-      padding: 75px 24px 45px;
-    }
+    
+.hero {
+  max-width: 1300px;
+  margin: auto;
+  padding: 75px 24px 60px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  align-items: center;
+  gap: 55px;
+}
 
-    .etiqueta {
-      color: #c05b82;
-      font-weight: bold;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
+.hero-contenido {
+  max-width: 700px;
+}
 
-    h1 {
-      font-size: clamp(32px, 5vw, 48px);
-      line-height: 1.2;
-      margin: 15px 0;
-      color: #713f56;
-    }
+.etiqueta {
+  display: inline-block;
+  color: #9d456b;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
 
-    .hero p {
-      max-width: 600px;
-      color: #806b77;
-      font-size: 17px;
-    }
+h1 {
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1.15;
+  margin: 10px 0 20px;
+  color: #713f56;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  max-width: 600px;
+  color: #6f6269;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.hero-boton {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #713f56;
+  border: 1px solid #713f56;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hero-boton:hover {
+  background: #9d456b;
+  border-color: #9d456b;
+  transform: translateY(-2px);
+}
+
+.hero-boton-secundario {
+  background: #fff;
+  color: #713f56;
+}
+
+.hero-boton-secundario:hover {
+  background: #fff3f7;
+  color: #713f56;
+  border-color: #9d456b;
+}
+
+.hero-boton:focus-visible {
+  outline: 3px solid #c05b82;
+  outline-offset: 4px;
+}
+
+.hero-foto {
+  width: min(100%, 320px);
+  aspect-ratio: 1;
+  justify-self: center;
+  border-radius: 50%;
+  padding: 9px;
+  background: linear-gradient(135deg, #f4cbd9, #c05b82, #713f56);
+  box-shadow: 0 15px 40px #713f561c;
+}
+
+.foto-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: #fff5f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #9d456b;
+}
+
+.foto-placeholder .simbolo-foto {
+  font-size: 45px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.foto-placeholder span:last-child {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Adaptación para tabletas y celulares */
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 55px 24px 45px;
+  }
+
+  .hero-contenido {
+    margin: auto;
+    text-align: center;
+  }
+
+  .hero p {
+    margin: auto;
+  }
+
+  .hero-acciones {
+    justify-content: center;
+  }
+
+  .hero-foto {
+    width: min(72vw, 280px);
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: clamp(32px, 8vw, 40px);
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-acciones {
+    gap: 10px;
+  }
+
+  .hero-boton {
+    padding: 11px 15px;
+  }
+}
 
     .proyectos {
       max-width: 1300px;
@@ -340,15 +476,44 @@
   </header>
 
   <main>
-    <section class="hero">
-      <span class="etiqueta">Portafolio de desarrollo</span>
-      <h1>Hola, bienvenid@ a mi portafolio digital.</h1>
-      <p>
-        Soy egresada de Ingeniería en Desarrollo y Gestión
-        de Software. Aquí comparto mis proyectos, las
-        tecnologías que utilizo y lo que voy aprendiendo.
-      </p>
-    </section>
+    
+<section class="hero">
+  <div class="hero-contenido">
+    <span class="etiqueta">
+      Desarrollo de software · Soporte técnico
+    </span>
+
+    <h1>
+      Hola, soy desarrolladora de software.
+    </h1>
+
+    <p>
+      Soy egresada de Ingeniería en Desarrollo y Gestión
+      de Software. Me interesa crear soluciones digitales,
+      desarrollar aplicaciones web y brindar soporte técnico
+      para resolver problemas y mejorar la experiencia
+      de los usuarios.
+    </p>
+
+    <div class="hero-acciones">
+      <a class="hero-boton" href="#paginas">
+        Ver mis proyectos ↗
+      </a>
+
+      <a class="hero-boton hero-boton-secundario"
+         href="#contacto">
+        Contáctame
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-foto">
+    <div class="foto-placeholder">
+      <span class="simbolo-foto" aria-hidden="true">♡</span>
+      <span>Tu fotografía aquí</span>
+    </div>
+  </div>
+</section>
 
     <section class="proyectos" id="paginas">
       <div class="encabezado">
