@@ -5,27 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio | Desarrollo de Software</title>
   <meta name="description" content="Portafolio de proyectos de desarrollo de software.">
-
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: Arial, sans-serif;
       background: #fff8fa;
       color: #374151;
       line-height: 1.6;
     }
-
     header {
       background: #fff;
       border-bottom: 1px solid #f3dce4;
       padding: 20px 8%;
     }
-
     nav {
       max-width: 1300px;
       margin: auto;
@@ -35,213 +31,177 @@
       gap: 16px;
       flex-wrap: wrap;
     }
-
     nav a {
       color: #805568;
       text-decoration: none;
     }
-
     nav a:hover {
       color: #c05b82;
     }
-
     .logo {
       font-weight: bold;
       color: #9d456b;
       font-size: 20px;
     }
-
-    
-.hero {
-  max-width: 1300px;
-  margin: auto;
-  padding: 75px 24px 60px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
-  align-items: center;
-  gap: 55px;
-}
-
-.hero-contenido {
-  max-width: 700px;
-}
-
-.etiqueta {
-  display: inline-block;
-  color: #9d456b;
-  font-weight: bold;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: clamp(34px, 4vw, 50px);
-  line-height: 1.15;
-  margin: 10px 0 20px;
-  color: #713f56;
-  letter-spacing: -1px;
-}
-
-.hero p {
-  max-width: 600px;
-  color: #6f6269;
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-.hero-acciones {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.hero-boton {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 8px;
-  background: #713f56;
-  border: 1px solid #713f56;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.hero-boton:hover {
-  background: #9d456b;
-  border-color: #9d456b;
-  transform: translateY(-2px);
-}
-
-.hero-boton-secundario {
-  background: #fff;
-  color: #713f56;
-}
-
-.hero-boton-secundario:hover {
-  background: #fff3f7;
-  color: #713f56;
-  border-color: #9d456b;
-}
-
-.hero-boton:focus-visible {
-  outline: 3px solid #c05b82;
-  outline-offset: 4px;
-}
-
-.hero-foto {
-  width: min(100%, 320px);
-  aspect-ratio: 1;
-  justify-self: center;
-  border-radius: 50%;
-  padding: 9px;
-  background: linear-gradient(135deg, #f4cbd9, #c05b82, #713f56);
-  box-shadow: 0 15px 40px #713f561c;
-}
-
-.foto-placeholder {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  background: #fff5f8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  color: #9d456b;
-}
-
-.foto-placeholder .simbolo-foto {
-  font-size: 45px;
-  line-height: 1.3;
-  margin-bottom: 8px;
-}
-
-.foto-placeholder span:last-child {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-/* Adaptación para tabletas y celulares */
-@media (max-width: 760px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 35px;
-    padding: 55px 24px 45px;
+    .hero {
+      max-width: 1300px;
+      margin: auto;
+      padding: 75px 24px 60px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+      align-items: center;
+      gap: 55px;
+    }
+    .hero-contenido {
+      max-width: 700px;
+    }
+    .etiqueta {
+      display: inline-block;
+      color: #9d456b;
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.15;
+      margin: 10px 0 20px;
+      color: #713f56;
+      letter-spacing: -1px;
+    }
+    .hero p {
+      max-width: 600px;
+      color: #6f6269;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .hero-acciones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .hero-boton {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background: #713f56;
+      border: 1px solid #713f56;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .hero-boton:hover {
+      background: #9d456b;
+      border-color: #9d456b;
+      transform: translateY(-2px);
+    }
+    .hero-boton-secundario {
+      background: #fff;
+      color: #713f56;
+    }
+    .hero-boton-secundario:hover {
+      background: #fff3f7;
+      color: #713f56;
+      border-color: #9d456b;
+    }
+    .hero-boton:focus-visible {
+      outline: 3px solid #c05b82;
+      outline-offset: 4px;
+    }
+    .hero-foto {
+      width: min(100%, 320px);
+      aspect-ratio: 1;
+      justify-self: center;
+      border-radius: 50%;
+      padding: 9px;
+      background: linear-gradient(135deg, #f4cbd9, #c05b82, #713f56);
+      box-shadow: 0 15px 40px #713f561c;
+    }
+    .foto-placeholder {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      background: #fff5f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #9d456b;
+    }
+    .foto-placeholder .simbolo-foto {
+      font-size: 45px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .foto-placeholder span:last-child {
+      font-size: 13px;
+      font-weight: bold;
+    }
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 55px 24px 45px;
+      }
+    .hero-contenido {
+      margin: auto;
+      text-align: center;
+    }
+    .hero p {
+      margin: auto;
+    }
+    .hero-acciones {
+      justify-content: center;
+    }
+    .hero-foto {
+      width: min(72vw, 280px);
+      grid-row: 1;
+    }
   }
-
-  .hero-contenido {
-    margin: auto;
-    text-align: center;
+  @media (max-width: 600px) {
+    h1 {
+      font-size: clamp(32px, 8vw, 40px);
+    }
+    .hero p {
+      font-size: 16px;
+    }
+    .hero-acciones {
+      gap: 10px;
+    }
+    .hero-boton {
+      padding: 11px 15px;
+    }
   }
-
-  .hero p {
-    margin: auto;
-  }
-
-  .hero-acciones {
-    justify-content: center;
-  }
-
-  .hero-foto {
-    width: min(72vw, 280px);
-    grid-row: 1;
-  }
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: clamp(32px, 8vw, 40px);
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero-acciones {
-    gap: 10px;
-  }
-
-  .hero-boton {
-    padding: 11px 15px;
-  }
-}
-
     .proyectos {
       max-width: 1300px;
       margin: auto;
       padding: 20px 24px 55px;
       scroll-margin-top: 20px;
     }
-
     .encabezado {
       margin-bottom: 25px;
     }
-
     .encabezado h2 {
       font-size: 28px;
       color: #713f56;
     }
-
     .encabezado p {
       color: #806b77;
       margin-top: 5px;
     }
-
-    /* Cuatro tarjetas por fila en pantallas grandes */
     .rejilla {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 24px;
     }
-
     .tarjeta {
       min-width: 0;
       background: #fff;
@@ -252,87 +212,73 @@ h1 {
       flex-direction: column;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .tarjeta:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 30px #9d456b18;
+    }  
+    .portada {
+      height: 210px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f9dce7, #fcecf2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9d456b;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px;
     }
-
-  
-.portada {
-  height: 210px;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, #f9dce7, #fcecf2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9d456b;
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  padding: 15px;
-}
-
-.portada.quiniela {
-  background: linear-gradient(135deg, #d8eee5, #e8f4ed);
-  color: #356b58;
-}
-
-.portada.serenidad {
-  background: linear-gradient(135deg, #f1dce9, #e9e0f5);
-  color: #805583;
-}
-
-.portada.vr {
-  background: linear-gradient(135deg, #dfe7fb, #eee5fa);
-  color: #62558e;
-}
-
-.portada.proximo {
-  background: linear-gradient(135deg, #fcecf2, #f8e8ed);
-  color: #b78398;
-  font-size: 21px;
-}
-
-.portada.con-imagen {
-  padding: 0;
-}
-
-.portada img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-
+  .portada.quiniela {
+    background: linear-gradient(135deg, #d8eee5, #e8f4ed);
+    color: #356b58;
+  }
+  .portada.serenidad {
+    background: linear-gradient(135deg, #f1dce9, #e9e0f5);
+    color: #805583;
+  }
+  .portada.vr {
+    background: linear-gradient(135deg, #dfe7fb, #eee5fa);
+    color: #62558e;
+  }
+  .portada.proximo {
+    background: linear-gradient(135deg, #fcecf2, #f8e8ed);
+    color: #b78398;
+    font-size: 21px;
+  }
+  .portada.con-imagen {
+    padding: 0;
+  }
+  .portada img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
     .contenido {
       padding: 24px;
       display: flex;
       flex-direction: column;
       flex: 1;
     }
-
     .contenido h3 {
       font-size: 21px;
       margin-bottom: 8px;
       color: #713f56;
     }
-
     .contenido p {
       color: #806b77;
       font-size: 14px;
       margin-bottom: 18px;
     }
-
     .tecnologias {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
       margin-bottom: 22px;
     }
-
     .tecnologias span {
       background: #fff0f5;
       padding: 5px 10px;
@@ -340,7 +286,6 @@ h1 {
       font-size: 12px;
       color: #87546b;
     }
-
     .boton {
       display: inline-block;
       align-self: flex-start;
@@ -354,11 +299,9 @@ h1 {
       font-weight: bold;
       transition: background 0.2s;
     }
-
     .boton:hover {
       background: #9d456b;
     }
-
     .boton-inactivo {
       display: inline-block;
       align-self: flex-start;
@@ -370,7 +313,6 @@ h1 {
       font-size: 14px;
       font-weight: bold;
     }
-
     footer {
       text-align: center;
       padding: 25px;
@@ -379,124 +321,101 @@ h1 {
       font-size: 13px;
       background: #fff;
     }
-
-    /* Pantallas medianas: tres tarjetas */
     @media (max-width: 1100px) {
       .rejilla {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
-
-    /* Tabletas: dos tarjetas */
     @media (max-width: 850px) {
       .rejilla {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 18px;
       }
     }
-
-    /* Celulares: una tarjeta */
     @media (max-width: 600px) {
       header {
         padding: 18px 6%;
       }
-
       nav {
         justify-content: center;
       }
-
       .hero {
         padding: 55px 24px 35px;
       }
-
       .proyectos {
         padding: 20px 24px 45px;
       }
-
       .rejilla {
         grid-template-columns: 1fr;
       }
     }
-    .contacto {
-  max-width: 1300px;
-  margin: auto;
-  padding: 20px 24px 60px;
-  text-align: center;
-  scroll-margin-top: 20px;
-}
-
-.contacto h2 {
-  font-size: 28px;
-  color: #713f56;
-  margin-bottom: 8px;
-}
-
-.contacto p {
-  color: #806b77;
-  margin-bottom: 22px;
-}
-
-.enlaces-contacto {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.enlaces-contacto a {
-  display: inline-block;
-  background: #fff;
-  color: #9d456b;
-  border: 1px solid #f0d9e2;
-  border-radius: 8px;
-  padding: 11px 18px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  transition: background 0.2s, color 0.2s;
-}
-
-.enlaces-contacto a:hover {
-  background: #c05b82;
-  color: #fff;
-}
-
-.enlaces-contacto a:focus-visible {
-  outline: 3px solid #9d456b;
-  outline-offset: 3px;
-}
-    
-.foto-perfil {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #fff;
-}
-
+      .contacto {
+        max-width: 1300px;
+        margin: auto;
+        padding: 20px 24px 60px;
+        text-align: center;
+        scroll-margin-top: 20px;
+    }
+      .contacto h2 {
+        font-size: 28px;
+        color: #713f56;
+        margin-bottom: 8px;
+      }
+      .contacto p {
+        color: #806b77;
+        margin-bottom: 22px;
+      }
+      .enlaces-contacto {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .enlaces-contacto a {
+          display: inline-block;
+          background: #fff;
+          color: #9d456b;
+          border: 1px solid #f0d9e2;
+          border-radius: 8px;
+          padding: 11px 18px;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 14px;
+          transition: background 0.2s, color 0.2s;
+        }
+      .enlaces-contacto a:hover {
+        background: #c05b82;
+        color: #fff;
+      }
+      .enlaces-contacto a:focus-visible {
+        outline: 3px solid #9d456b;
+        outline-offset: 3px;
+      }
+      .foto-perfil {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #fff;
+      }
   </style>
 </head>
-
 <body>
   <header>
     <nav>
       <a class="logo" href="#">Mi Portafolio.</a>
     </nav>
   </header>
-
   <main>
-    
 <section class="hero">
   <div class="hero-contenido">
     <span class="etiqueta">
       Desarrollo de software · Soporte técnico
     </span>
-
     <h1>
       Hola, soy desarrolladora de software.
     </h1>
-
     <p>
       Soy egresada de Ingeniería en Desarrollo y Gestión
       de Software. Me interesa crear soluciones digitales,
@@ -504,35 +423,25 @@ h1 {
       para resolver problemas y mejorar la experiencia
       de los usuarios.
     </p>
-
     <div class="hero-acciones">
       <a class="hero-boton" href="#paginas">
-        Ver mis proyectos ↗
+        Ver mis proyectos
       </a>
-
       <a class="hero-boton hero-boton-secundario"
          href="#contacto">
         Contáctame
       </a>
     </div>
   </div>
-
   <div class="hero-foto"> 
-<img
-  src="imagenes/mi-foto.jpg"
-  alt="Fotografía profesional"
-  class="foto-perfil"
->
-
+<img src="imagenes/mi-foto.JPG" alt="Fotografía profesional" class="foto-perfil">
   </div>
 </section>
-
     <section class="proyectos" id="paginas">
       <div class="encabezado">
         <h2>Páginas</h2>
         <p>Proyectos web y sistemas desarrollados.</p>
       </div>
-
       <div class="rejilla">
         <article class="tarjeta">
           <div class="portada proximo con-imagen">
@@ -540,7 +449,6 @@ h1 {
        alt="Captura del sitio web Nayeli Díaz MakeUp"
        loading="lazy">
 </div>
-
           <div class="contenido">
             <h3>Nayeli Díaz Makeup</h3>
             <p>
@@ -553,7 +461,6 @@ h1 {
               <span>HTML</span>
               <span>CSS</span>
             </div>
-
             <a
               class="boton"
               href="https://nayelidiazmakeup.lovestoblog.com/"
