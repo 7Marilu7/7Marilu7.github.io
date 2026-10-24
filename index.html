@@ -1,27 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio | Desarrollo de Software</title>
-  <meta name="description" content="Portafolio de proyectos de desarrollo de software.">
+  <meta name="description" content="Portafolio de proyectos de desarrollo de software y soporte técnico.">
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: Arial, sans-serif;
       background: #fff8fa;
       color: #374151;
       line-height: 1.6;
     }
+
     header {
       background: #fff;
       border-bottom: 1px solid #f3dce4;
       padding: 20px 8%;
     }
+
     nav {
       max-width: 1300px;
       margin: auto;
@@ -31,18 +36,22 @@
       gap: 16px;
       flex-wrap: wrap;
     }
+
     nav a {
       color: #805568;
       text-decoration: none;
     }
+
     nav a:hover {
       color: #c05b82;
     }
+
     .logo {
       font-weight: bold;
       color: #9d456b;
       font-size: 20px;
     }
+
     .hero {
       max-width: 1300px;
       margin: auto;
@@ -52,9 +61,11 @@
       align-items: center;
       gap: 55px;
     }
+
     .hero-contenido {
       max-width: 700px;
     }
+
     .etiqueta {
       display: inline-block;
       color: #9d456b;
@@ -64,6 +75,7 @@
       letter-spacing: 2px;
       margin-bottom: 10px;
     }
+
     h1 {
       font-size: clamp(34px, 4vw, 50px);
       line-height: 1.15;
@@ -71,18 +83,21 @@
       color: #713f56;
       letter-spacing: -1px;
     }
+
     .hero p {
       max-width: 600px;
       color: #6f6269;
       font-size: 17px;
       line-height: 1.8;
     }
+
     .hero-acciones {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
       margin-top: 28px;
     }
+
     .hero-boton {
       display: inline-block;
       padding: 12px 20px;
@@ -95,24 +110,29 @@
       font-weight: bold;
       transition: background 0.2s, transform 0.2s;
     }
+
     .hero-boton:hover {
       background: #9d456b;
       border-color: #9d456b;
       transform: translateY(-2px);
     }
+
     .hero-boton-secundario {
       background: #fff;
       color: #713f56;
     }
+
     .hero-boton-secundario:hover {
       background: #fff3f7;
       color: #713f56;
       border-color: #9d456b;
     }
+
     .hero-boton:focus-visible {
       outline: 3px solid #c05b82;
       outline-offset: 4px;
     }
+
     .hero-foto {
       width: min(100%, 320px);
       aspect-ratio: 1;
@@ -121,7 +141,9 @@
       padding: 9px;
       background: linear-gradient(135deg, #f4cbd9, #c05b82, #713f56);
       box-shadow: 0 15px 40px #713f561c;
+      overflow: hidden;
     }
+
     .foto-placeholder {
       width: 100%;
       height: 100%;
@@ -136,72 +158,55 @@
       padding: 20px;
       color: #9d456b;
     }
+
     .foto-placeholder .simbolo-foto {
       font-size: 45px;
       line-height: 1.3;
       margin-bottom: 8px;
     }
+
     .foto-placeholder span:last-child {
       font-size: 13px;
       font-weight: bold;
     }
-    @media (max-width: 760px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        padding: 55px 24px 45px;
-      }
-    .hero-contenido {
-      margin: auto;
-      text-align: center;
+
+    .foto-perfil {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: 50%;
+      border: 4px solid #fff;
     }
-    .hero p {
-      margin: auto;
-    }
-    .hero-acciones {
-      justify-content: center;
-    }
-    .hero-foto {
-      width: min(72vw, 280px);
-      grid-row: 1;
-    }
-  }
-  @media (max-width: 600px) {
-    h1 {
-      font-size: clamp(32px, 8vw, 40px);
-    }
-    .hero p {
-      font-size: 16px;
-    }
-    .hero-acciones {
-      gap: 10px;
-    }
-    .hero-boton {
-      padding: 11px 15px;
-    }
-  }
+
     .proyectos {
       max-width: 1300px;
       margin: auto;
       padding: 20px 24px 55px;
-      scroll-margin-top: 20px;
+      scroll-margin-top: 90px;
     }
+
     .encabezado {
       margin-bottom: 25px;
     }
+
     .encabezado h2 {
       font-size: 28px;
       color: #713f56;
     }
+
     .encabezado p {
       color: #806b77;
       margin-top: 5px;
     }
+
     .rejilla {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 24px;
     }
+
     .tarjeta {
       min-width: 0;
       background: #fff;
@@ -212,10 +217,12 @@
       flex-direction: column;
       transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .tarjeta:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 30px #9d456b18;
-    }  
+    }
+
     .portada {
       height: 210px;
       position: relative;
@@ -230,55 +237,66 @@
       text-align: center;
       padding: 15px;
     }
-  .portada.quiniela {
-    background: linear-gradient(135deg, #d8eee5, #e8f4ed);
-    color: #356b58;
-  }
-  .portada.serenidad {
-    background: linear-gradient(135deg, #f1dce9, #e9e0f5);
-    color: #805583;
-  }
-  .portada.vr {
-    background: linear-gradient(135deg, #dfe7fb, #eee5fa);
-    color: #62558e;
-  }
-  .portada.proximo {
-    background: linear-gradient(135deg, #fcecf2, #f8e8ed);
-    color: #b78398;
-    font-size: 21px;
-  }
-  .portada.con-imagen {
-    padding: 0;
-  }
-  .portada img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-  }
+
+    .portada.quiniela {
+      background: linear-gradient(135deg, #d8eee5, #e8f4ed);
+      color: #356b58;
+    }
+
+    .portada.serenidad {
+      background: linear-gradient(135deg, #f1dce9, #e9e0f5);
+      color: #805583;
+    }
+
+    .portada.vr {
+      background: linear-gradient(135deg, #dfe7fb, #eee5fa);
+      color: #62558e;
+    }
+
+    .portada.proximo {
+      background: linear-gradient(135deg, #fcecf2, #f8e8ed);
+      color: #b78398;
+      font-size: 21px;
+    }
+
+    .portada.con-imagen {
+      padding: 0;
+    }
+
+    .portada img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
     .contenido {
       padding: 24px;
       display: flex;
       flex-direction: column;
       flex: 1;
     }
+
     .contenido h3 {
       font-size: 21px;
       margin-bottom: 8px;
       color: #713f56;
     }
+
     .contenido p {
       color: #806b77;
       font-size: 14px;
       margin-bottom: 18px;
     }
+
     .tecnologias {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
       margin-bottom: 22px;
     }
+
     .tecnologias span {
       background: #fff0f5;
       padding: 5px 10px;
@@ -286,6 +304,7 @@
       font-size: 12px;
       color: #87546b;
     }
+
     .boton {
       display: inline-block;
       align-self: flex-start;
@@ -299,9 +318,11 @@
       font-weight: bold;
       transition: background 0.2s;
     }
+
     .boton:hover {
       background: #9d456b;
     }
+
     .boton-inactivo {
       display: inline-block;
       align-self: flex-start;
@@ -313,6 +334,183 @@
       font-size: 14px;
       font-weight: bold;
     }
+
+    .habilidades {
+      max-width: 1300px;
+      margin: auto;
+      padding: 35px 24px 55px;
+      scroll-margin-top: 90px;
+    }
+
+    .grupos-habilidades {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+    }
+
+    .grupo-habilidad {
+      padding: 8px 0 18px;
+      border-bottom: 2px solid #f0d9e2;
+    }
+
+    .grupo-habilidad h3 {
+      color: #713f56;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .grupo-habilidad p {
+      color: #806b77;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .lista-habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .lista-habilidades span {
+      display: inline-block;
+      background: #fff0f5;
+      color: #87546b;
+      padding: 6px 11px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    .experiencia {
+      max-width: 1300px;
+      margin: auto;
+      padding: 35px 24px 60px;
+      scroll-margin-top: 90px;
+    }
+
+    .experiencia-intro {
+      max-width: 850px;
+      color: #806b77;
+      margin-bottom: 30px;
+    }
+
+    .linea-tiempo {
+      position: relative;
+      max-width: 900px;
+      margin-left: 8px;
+      padding-left: 32px;
+      border-left: 2px solid #f0d9e2;
+    }
+
+    .etapa-experiencia {
+      position: relative;
+      padding: 0 0 38px;
+    }
+
+    .etapa-experiencia:last-child {
+      padding-bottom: 0;
+    }
+
+    .etapa-experiencia::before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: #c05b82;
+      border: 3px solid #fff8fa;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #c05b82;
+    }
+
+    .periodo-experiencia {
+      display: inline-block;
+      color: #9d456b;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .etapa-experiencia h3 {
+      color: #713f56;
+      font-size: 21px;
+      margin-bottom: 4px;
+    }
+
+    .etapa-experiencia h4 {
+      color: #9d456b;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .etapa-experiencia p {
+      max-width: 780px;
+      color: #806b77;
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+
+    .contacto {
+      max-width: 1300px;
+      margin: auto;
+      padding: 35px 24px 65px;
+      text-align: center;
+      scroll-margin-top: 90px;
+    }
+
+    .contacto h2 {
+      font-size: 28px;
+      color: #713f56;
+      margin-bottom: 8px;
+    }
+
+    .contacto p {
+      color: #806b77;
+      margin-bottom: 28px;
+    }
+
+    .enlaces-contacto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .enlaces-contacto a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #713f56;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 10px 4px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .enlaces-contacto a:hover {
+      color: #c05b82;
+      border-bottom-color: #c05b82;
+    }
+
+    .icono-contacto {
+      width: 23px;
+      height: 23px;
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+
+    .enlaces-contacto a:focus-visible {
+      outline: 3px solid #9d456b;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
@@ -321,217 +519,189 @@
       font-size: 13px;
       background: #fff;
     }
+
     @media (max-width: 1100px) {
       .rejilla {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
+
     @media (max-width: 850px) {
       .rejilla {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 18px;
       }
+
+      .grupos-habilidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
     }
+
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 55px 24px 45px;
+      }
+
+      .hero-contenido {
+        margin: auto;
+        text-align: center;
+      }
+
+      .hero p {
+        margin: auto;
+      }
+
+      .hero-acciones {
+        justify-content: center;
+      }
+
+      .hero-foto {
+        width: min(72vw, 280px);
+        grid-row: 1;
+      }
+    }
+
     @media (max-width: 600px) {
       header {
         padding: 18px 6%;
       }
+
       nav {
         justify-content: center;
       }
+
+      h1 {
+        font-size: clamp(32px, 8vw, 40px);
+      }
+
       .hero {
         padding: 55px 24px 35px;
       }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-acciones {
+        gap: 10px;
+      }
+
+      .hero-boton {
+        padding: 11px 15px;
+      }
+
       .proyectos {
         padding: 20px 24px 45px;
       }
+
       .rejilla {
         grid-template-columns: 1fr;
       }
-    }
-      .contacto {
-        max-width: 1300px;
-        margin: auto;
-        padding: 20px 24px 60px;
-        text-align: center;
-        scroll-margin-top: 20px;
-    }
-      .contacto h2 {
-        font-size: 28px;
-        color: #713f56;
-        margin-bottom: 8px;
-      }
-      .contacto p {
-        color: #806b77;
-        margin-bottom: 22px;
-      }
-      .enlaces-contacto {
-        display: flex;
-        justify-content: center;
-        gap: 14px;
-        flex-wrap: wrap;
-      }
-      .enlaces-contacto a {
-          display: inline-block;
-          background: #fff;
-          color: #9d456b;
-          border: 1px solid #f0d9e2;
-          border-radius: 8px;
-          padding: 11px 18px;
-          text-decoration: none;
-          font-weight: bold;
-          font-size: 14px;
-          transition: background 0.2s, color 0.2s;
-        }
-      .enlaces-contacto a:hover {
-        background: #c05b82;
-        color: #fff;
-      }
-      .enlaces-contacto a:focus-visible {
-        outline: 3px solid #9d456b;
-        outline-offset: 3px;
-      }
-    
-    .habilidades, .sobre-mi {
-      max-width: 1300px;
-      margin: auto;
-      padding: 35px 24px 55px;
-      scroll-margin-top: 30px;
-    }
-    .rejilla-habilidades {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-    }
-    .tarjeta-habilidad, .tarjeta-experiencia {
-      background: #fff;
-      border: 1px solid #f0d9e2;
-      border-radius: 16px;
-      padding: 24px;
-    }
-    .tarjeta-habilidad h3, .tarjeta-experiencia h3 {
-      color: #713f56;
-      font-size: 19px;
-      margin-bottom: 12px;
-    }
-    .tarjeta-habilidad p, .tarjeta-experiencia p {
-      color: #806b77;
-      font-size: 14px;
-      margin-bottom: 14px;
-    }
-    .lista-habilidades {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .lista-habilidades span {
-      background: #fff0f5;
-      color: #87546b;
-      padding: 5px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-    }
-    .experiencia-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-    }
-    .periodo-experiencia {
-      display: inline-block;
-      color: #9d456b;
-      background: #fff0f5;
-      padding: 5px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
-    .sobre-mi-intro {
-      max-width: 850px;
-      color: #806b77;
-      margin-bottom: 25px;
-    }
-    @media (max-width: 850px) {
-      .rejilla-habilidades {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-    @media (max-width: 600px) {
-      .rejilla-habilidades, .experiencia-grid {
+
+      .grupos-habilidades {
         grid-template-columns: 1fr;
+        gap: 18px;
       }
-    }
-      .foto-perfil{
-        display:block;
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        object-position:center 20%;
-        border-radius:50%;
-        border:4px solid #fff
+
+      .etapa-experiencia h3 {
+        font-size: 19px;
+      }
+
+      .linea-tiempo {
+        padding-left: 25px;
+      }
+
+      .etapa-experiencia::before {
+        left: -34px;
+      }
+
+      .enlaces-contacto {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav>
       <a class="logo" href="#">Mi Portafolio.</a>
     </nav>
   </header>
+
   <main>
-<section class="hero">
-  <div class="hero-contenido">
-    <span class="etiqueta">
-      Desarrollo de software · Soporte técnico
-    </span>
-    <h1>
-      María Guadalupe Cruz Paz
-    </h1>
-    <p>
-      Hola, Soy egresada de Ingeniería en Desarrollo y Gestión
-      de Software. Me interesa crear soluciones digitales,
-      desarrollar aplicaciones web y brindar soporte técnico
-      para resolver problemas y mejorar la experiencia
-      de los usuarios.
-    </p>
-    <div class="hero-acciones">
-      <a class="hero-boton" href="#paginas">
-        Ver mis proyectos
-      </a>
-      <a class="hero-boton hero-boton-secundario"
-         href="#contacto">
-        Contáctame
-      </a>
-    </div>
-  </div>
-  <div class="hero-foto"> 
-<img src="imagenes/mi-foto.JPG" alt="Fotografía profesional" class="foto-perfil">
-  </div>
-</section>
+    <section class="hero" id="inicio">
+      <div class="hero-contenido">
+        <span class="etiqueta">
+          Desarrollo de software · Soporte técnico
+        </span>
+
+        <h1>María Guadalupe Cruz Paz</h1>
+
+        <p>
+          Hola, soy egresada de Ingeniería en Desarrollo y Gestión
+          de Software. Me interesa crear soluciones digitales,
+          desarrollar aplicaciones web y brindar soporte técnico
+          para resolver problemas y mejorar la experiencia
+          de los usuarios.
+        </p>
+
+        <div class="hero-acciones">
+          <a class="hero-boton" href="#paginas">
+            Ver mis proyectos
+          </a>
+
+          <a class="hero-boton hero-boton-secundario" href="#contacto">
+            Contáctame
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-foto">
+        <img
+          src="imagenes/mi-foto.JPG"
+          alt="Fotografía profesional"
+          class="foto-perfil"
+        >
+      </div>
+    </section>
+
     <section class="proyectos" id="paginas">
       <div class="encabezado">
         <h2>Páginas</h2>
         <p>Proyectos web y sistemas desarrollados.</p>
       </div>
+
       <div class="rejilla">
         <article class="tarjeta">
           <div class="portada proximo con-imagen">
-  <img src="imagenes/ndmu.png"
-       alt="Captura del sitio web Nayeli Díaz MakeUp"
-       loading="lazy">
-</div>
+            <img
+              src="imagenes/ndmu.png"
+              alt="Captura del sitio web Nayeli Díaz MakeUp"
+              loading="lazy"
+            >
+          </div>
+
           <div class="contenido">
             <h3>Nayeli Díaz Makeup</h3>
             <p>
-             Sitio web para un negocio de maquillaje, desarrollado con tecnologías web para presentar sus servicios y ofrecer una presencia digital.
+              Sitio web para un negocio de maquillaje, desarrollado
+              con tecnologías web para presentar sus servicios y
+              ofrecer una presencia digital.
             </p>
-           <div class="tecnologias">
+
+            <div class="tecnologias">
               <span>PHP</span>
               <span>MySQL</span>
               <span>JavaScript</span>
               <span>HTML</span>
               <span>CSS</span>
             </div>
+
             <a
               class="boton"
               href="https://nayelidiazmakeup.lovestoblog.com/"
@@ -544,18 +714,19 @@
         </article>
 
         <article class="tarjeta">
-         <div class="portada quiniela con-imagen">
-  <img
-    src="imagenes/quiniela.png"
-    alt="Captura de pantalla de Quiniela México 77"
-    loading="lazy"
-  >
-</div>
+          <div class="portada quiniela con-imagen">
+            <img
+              src="imagenes/quiniela.png"
+              alt="Captura de pantalla de Quiniela México 77"
+              loading="lazy"
+            >
+          </div>
 
           <div class="contenido">
             <h3>Quiniela México 77</h3>
             <p>
-              Página web de quinielas deportivas que permite registrar predicciones, gestionar partidos y consultar resultados. 
+              Página web de quinielas deportivas que permite registrar
+              predicciones, gestionar partidos y consultar resultados.
             </p>
 
             <div class="tecnologias">
@@ -576,17 +747,22 @@
             </a>
           </div>
         </article>
-           <article class="tarjeta">
-         <div class="portada con-imagen">
-  <img src="imagenes/fanpage.png"
-       alt="Captura de la página FanPage"
-       loading="lazy">
-</div>
+
+        <article class="tarjeta">
+          <div class="portada con-imagen">
+            <img
+              src="imagenes/fanpage.png"
+              alt="Captura de la página FanPage"
+              loading="lazy"
+            >
+          </div>
 
           <div class="contenido">
             <h3>FanPage</h3>
             <p>
-            Página web de práctica dedicada a una temática de interés personal, desarrollada con HTML y CSS y publicada mediante GitHub Pages.
+              Página web de práctica dedicada a una temática de interés
+              personal, desarrollada con HTML y CSS y publicada mediante
+              GitHub Pages.
             </p>
 
             <div class="tecnologias">
@@ -605,7 +781,6 @@
             </a>
           </div>
         </article>
-
       </div>
     </section>
 
@@ -616,18 +791,22 @@
       </div>
 
       <div class="rejilla">
-
         <article class="tarjeta">
           <div class="portada serenidad con-imagen">
-  <img src="imagenes/serenidad.png"
-       alt="Captura de la aplicación Serenidad"
-       loading="lazy">
-</div>
+            <img
+              src="imagenes/serenidad.png"
+              alt="Captura de la aplicación Serenidad"
+              loading="lazy"
+            >
+          </div>
 
           <div class="contenido">
             <h3>Serenidad</h3>
             <p>
-              Aplicación móvil desarrollada para un proyecto escolar, enfocada en el bienestar emocional. Incluye funcionalidades relacionadas con el registro del estado de ánimo, ejercicios de respiración, meditaciones guiadas y seguimiento del progreso.
+              Aplicación móvil desarrollada para un proyecto escolar,
+              enfocada en el bienestar emocional. Incluye funcionalidades
+              relacionadas con el registro del estado de ánimo, ejercicios
+              de respiración, meditaciones guiadas y seguimiento del progreso.
               Consulta la presentación visual para conocer el proyecto.
             </p>
 
@@ -642,22 +821,26 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver presentación↗
+              Ver presentación ↗
             </a>
           </div>
         </article>
 
         <article class="tarjeta">
           <div class="portada vr con-imagen">
-  <img src="imagenes/gafas.png"
-       alt="Captura del proyecto Simulador de Gafas VR"
-       loading="lazy">
-</div>
+            <img
+              src="imagenes/gafas.png"
+              alt="Captura del proyecto Simulador de Gafas VR"
+              loading="lazy"
+            >
+          </div>
 
           <div class="contenido">
             <h3>Simulador de Gafas VR</h3>
             <p>
-             Proyecto escolar de desarrollo móvil que explora la simulación del uso de gafas de realidad virtual. Consulta la presentación visual para conocer el proyecto.
+              Proyecto escolar de desarrollo móvil que explora la
+              simulación del uso de gafas de realidad virtual.
+              Consulta la presentación visual para conocer el proyecto.
             </p>
 
             <div class="tecnologias">
@@ -671,7 +854,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver presentación↗
+              Ver presentación ↗
             </a>
           </div>
         </article>
@@ -684,7 +867,9 @@
           <div class="contenido">
             <h3>Nueva aplicación</h3>
             <p>
-              Espacio reservado para una futura aplicación móvil, donde compartiré sus funcionalidades, tecnologías utilizadas y principales características.
+              Espacio reservado para una futura aplicación móvil,
+              donde compartiré sus funcionalidades, tecnologías
+              utilizadas y principales características.
             </p>
 
             <div class="tecnologias">
@@ -694,19 +879,23 @@
             <span class="boton-inactivo">Próximamente</span>
           </div>
         </article>
-
       </div>
     </section>
-    
+
     <section class="habilidades" id="habilidades">
       <div class="encabezado">
         <h2>Mis habilidades</h2>
-        <p>Conocimientos y herramientas que utilizo en desarrollo de software y soporte técnico.</p>
+        <p>
+          Conocimientos y herramientas que utilizo en desarrollo
+          de software y soporte técnico.
+        </p>
       </div>
-      <div class="rejilla-habilidades">
-        <article class="tarjeta-habilidad">
+
+      <div class="grupos-habilidades">
+        <div class="grupo-habilidad">
           <h3>Desarrollo web</h3>
-          <p>Creación de páginas web y sistemas para gestionar información.</p>
+          <p>Creación de páginas web y sistemas.</p>
+
           <div class="lista-habilidades">
             <span>HTML5</span>
             <span>CSS3</span>
@@ -714,10 +903,12 @@
             <span>PHP</span>
             <span>React básico</span>
           </div>
-        </article>
-        <article class="tarjeta-habilidad">
+        </div>
+
+        <div class="grupo-habilidad">
           <h3>Bases de datos y herramientas</h3>
-          <p>Gestión de información y herramientas para desarrollar proyectos.</p>
+          <p>Gestión de información y desarrollo.</p>
+
           <div class="lista-habilidades">
             <span>MySQL</span>
             <span>SQL</span>
@@ -728,85 +919,116 @@
             <span>Kotlin</span>
             <span>XAMPP</span>
           </div>
-        </article>
-        <article class="tarjeta-habilidad">
+        </div>
+
+        <div class="grupo-habilidad">
           <h3>Soporte técnico</h3>
-          <p>Conocimientos prácticos adquiridos durante mis prácticas profesionales.</p>
+          <p>Conocimientos adquiridos en prácticas profesionales.</p>
+
           <div class="lista-habilidades">
             <span>Mantenimiento de equipos</span>
             <span>Apoyo a usuarios</span>
             <span>Gestión de información</span>
             <span>Microsoft Office</span>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="sobre-mi" id="sobre-mi">
+    <section class="experiencia" id="experiencia">
       <div class="encabezado">
-        <h2>Sobre mí</h2>
+        <h2>Experiencia profesional</h2>
+        <p>
+          Mi experiencia práctica en Gobierno Digital y Desarrollo de Sistemas.
+        </p>
       </div>
-      <p class="sobre-mi-intro">
+
+      <p class="experiencia-intro">
         Soy egresada de Ingeniería en Desarrollo y Gestión de Software.
-        Cuento con experiencia práctica adquirida durante mis prácticas
-        profesionales en áreas de Gobierno Digital y Desarrollo de Sistemas.
-        Me interesa seguir creciendo profesionalmente en desarrollo de
-        software y soporte técnico, aportando soluciones y aprendiendo
-        nuevas tecnologías.
+        Durante mis prácticas profesionales participé en proyectos de
+        digitalización, desarrollo de aplicaciones y apoyo técnico.
+        Me interesa continuar creciendo en desarrollo de software
+        y soporte técnico.
       </p>
-      <div class="experiencia-grid">
-        <article class="tarjeta-experiencia">
-          <span class="periodo-experiencia">Prácticas profesionales · 4 meses</span>
+
+      <div class="linea-tiempo">
+        <article class="etapa-experiencia">
+          <span class="periodo-experiencia">
+            PRÁCTICAS PROFESIONALES · 4 MESES
+          </span>
+
           <h3>Ayuntamiento de Tlazala</h3>
-          <p><strong>Gobierno Digital / Catastro</strong></p>
+          <h4>Gobierno Digital / Catastro</h4>
+
           <p>
             Colaboré en un proyecto de digitalización y consulta de expedientes,
             con búsqueda por número de expediente o nombre y acceso a documentos
-            PDF. También apoyé en el manejo de registros en Excel, el mantenimiento
+            PDF.
+          </p>
+
+          <p>
+            También apoyé en el manejo de registros en Excel, el mantenimiento
             de equipos y la atención ocasional a usuarios.
           </p>
         </article>
-        <article class="tarjeta-experiencia">
-          <span class="periodo-experiencia">Prácticas profesionales · 4 meses</span>
+
+        <article class="etapa-experiencia">
+          <span class="periodo-experiencia">
+            PRÁCTICAS PROFESIONALES · 4 MESES
+          </span>
+
           <h3>Ayuntamiento de Tlalnepantla</h3>
-          <p><strong>Gobierno Digital / Desarrollo de Sistemas</strong></p>
+          <h4>Gobierno Digital / Desarrollo de Sistemas</h4>
+
           <p>
             Participé en la planeación de proyectos y desarrollé una aplicación
-            Android para simular pagos de servicios municipales, junto con un
-            panel administrativo conectado a la aplicación.
+            Android para simular pagos de servicios municipales.
+          </p>
+
+          <p>
+            También desarrollé un panel administrativo conectado a la aplicación.
           </p>
         </article>
       </div>
     </section>
+
     <section class="contacto" id="contacto">
-  <h2>Contacto</h2>
+      <h2>Contacto</h2>
 
-  <p>
-    ¿Te interesa conocer más sobre mis proyectos?
-    Puedes encontrarme en los siguientes enlaces.
-  </p>
-<div class="enlaces-contacto">
-  <a
-    href="https://github.com/7Marilu7"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    GitHub ↗
-  </a>
+      <p>
+        ¿Te interesa conocer más sobre mis proyectos?
+        Puedes encontrarme en los siguientes enlaces.
+      </p>
 
-  <a href="mailto:marilucruz428@gmail.com">
-    Correo electrónico
-  </a>
-
-  <a href="tel:+525526791094">
-    Teléfono
-  </a>
-</div>
-</section>
+      <div class="enlaces-contacto">
+        <a
+          href="https://github.com/7Marilu7"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visitar mi perfil de GitHub"
+        >
+          <svg class="icono-contacto" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .1.77 2.05 3.1 1.44.1-.73.4-1.22.7-1.5-2.48-.28-5.1-1.24-5.1-5.53 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.42.1-2.96 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.6 1.54.22 2.68.1 2.96.72.78 1.16 1.78 1.16 3 0 4.3-2.62 5.25-5.12 5.53.4.34.75 1 .75 2.02v3.01c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/>
+          </svg>
+          GitHub ↗
+        </a>
+        <a href="mailto:marilucruz428@gmail.com">
+          <svg class="icono-contacto" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm9 8L3 7v10h18V7l-9 6Zm0-2.4L19.5 7h-15L12 10.6Z"/>
+          </svg>
+          Correo electrónico
+        </a>
+        <a href="tel:+525526791094">
+          <svg class="icono-contacto" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.6 2h3.1a1.5 1.5 0 0 1 1.46 1.17l.75 3.27a1.5 1.5 0 0 1-.43 1.42L9.6 9.75a14.1 14.1 0 0 0 4.65 4.65l1.89-1.89a1.5 1.5 0 0 1 1.42-.43l3.27.75A1.5 1.5 0 0 1 22 14.29v3.1a2.6 2.6 0 0 1-2.83 2.6A19.2 19.2 0 0 1 4.01 4.83 2.6 2.6 0 0 1 6.6 2Z"/>
+          </svg>
+          Teléfono
+        </a>
+      </div>
+    </section>
   </main>
-
- <footer>
-  Portafolio de Desarrollo de Software · 2026
-</footer>
+  <footer>
+    Portafolio de Desarrollo de Software · 2026
+  </footer>
 </body>
 </html>
