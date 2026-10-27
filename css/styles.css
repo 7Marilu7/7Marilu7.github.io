@@ -1,0 +1,549 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8fa;
+      color: #374151;
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #f3dce4;
+      padding: 16px 8%;
+      backdrop-filter: blur(12px);
+    }
+    nav {
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo {
+      flex-shrink: 0;
+      font-weight: bold;
+      color: #9d456b;
+      font-size: 21px;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 27px;
+      list-style: none;
+    }
+    .menu a {
+      position: relative;
+      display: inline-block;
+      padding: 8px 0;
+      color: #805568;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .menu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: #c05b82;
+      transition: width 0.2s;
+    }
+    .menu a:hover,
+    .menu a:focus-visible {
+      color: #c05b82;
+    }
+    .menu a:hover::after,
+    .menu a:focus-visible::after {
+      width: 100%;
+    }
+    .logo:focus-visible,
+    .menu a:focus-visible {
+      outline: 2px solid #c05b82;
+      outline-offset: 5px;
+      border-radius: 3px;
+    }
+    .hero {
+      max-width: 1300px;
+      margin: auto;
+      padding: 75px 24px 60px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+      align-items: center;
+      gap: 55px;
+      scroll-margin-top: 100px;
+    }
+    .hero-contenido {
+      max-width: 700px;
+    }
+    .etiqueta {
+      display: inline-block;
+      color: #9d456b;
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.15;
+      margin: 10px 0 20px;
+      color: #713f56;
+      letter-spacing: -1px;
+    }
+    .hero p {
+      max-width: 600px;
+      color: #6f6269;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .hero-foto {
+      width: min(100%, 320px);
+      aspect-ratio: 1;
+      justify-self: center;
+      border-radius: 50%;
+      padding: 9px;
+      background: linear-gradient(135deg, #f4cbd9, #c05b82, #713f56);
+      box-shadow: 0 15px 40px #713f561c;
+      overflow: hidden;
+    }
+    .foto-perfil {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    }
+    .proyectos {
+      max-width: 1300px;
+      margin: auto;
+      padding: 35px 24px 55px;
+      scroll-margin-top: 100px;
+    }
+    .encabezado {
+      margin-bottom: 25px;
+    }
+    .encabezado h2 {
+      font-size: 28px;
+      color: #713f56;
+    }
+    .encabezado p {
+      color: #806b77;
+      margin-top: 5px;
+    }
+    .rejilla {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .tarjeta {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid #f0d9e2;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .tarjeta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px #9d456b18;
+    }
+    .portada {
+      height: 210px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #f9dce7, #fcecf2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9d456b;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px;
+    }
+    .portada.quiniela {
+      background: linear-gradient(135deg, #d8eee5, #e8f4ed);
+      color: #356b58;
+    }
+    .portada.serenidad {
+      background: linear-gradient(135deg, #f1dce9, #e9e0f5);
+      color: #805583;
+    }
+    .portada.vr {
+      background: linear-gradient(135deg, #dfe7fb, #eee5fa);
+      color: #62558e;
+    }
+    .portada.proximo {
+      background: linear-gradient(135deg, #fcecf2, #f8e8ed);
+      color: #b78398;
+      font-size: 21px;
+    }
+    .portada.con-imagen {
+      padding: 0;
+    }
+    .portada img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+    .contenido {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .contenido h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+      color: #713f56;
+    }
+    .contenido p {
+      color: #806b77;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    .tecnologias {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+    .tecnologias span {
+      background: #fff0f5;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #87546b;
+    }
+    .boton {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: auto;
+      background: #c05b82;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .boton:hover {
+      background: #9d456b;
+    }
+    .boton-inactivo {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: auto;
+      background: #f4e5eb;
+      color: #9d7184;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .habilidades {
+      max-width: 1300px;
+      margin: auto;
+      padding: 35px 24px 55px;
+      scroll-margin-top: 100px;
+    }
+    .grupos-habilidades {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+    }
+    .grupo-habilidad {
+      padding: 8px 0 18px;
+      border-bottom: 2px solid #f0d9e2;
+    }
+    .grupo-habilidad h3 {
+      color: #713f56;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .grupo-habilidad p {
+      color: #806b77;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    .lista-habilidades {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .lista-habilidades span {
+      display: inline-block;
+      background: #fff0f5;
+      color: #87546b;
+      padding: 6px 11px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .experiencia {
+      max-width: 1300px;
+      margin: auto;
+      padding: 35px 24px 60px;
+      scroll-margin-top: 100px;
+    }
+    .experiencia-intro {
+      max-width: 850px;
+      color: #806b77;
+      margin-bottom: 30px;
+    }
+    .linea-tiempo {
+      position: relative;
+      max-width: 900px;
+      margin-left: 8px;
+      padding-left: 32px;
+      border-left: 2px solid #f0d9e2;
+    }
+    .etapa-experiencia {
+      position: relative;
+      padding: 0 0 38px;
+    }
+    .etapa-experiencia:last-child {
+      padding-bottom: 0;
+    }
+    .etapa-experiencia::before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: #c05b82;
+      border: 3px solid #fff8fa;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #c05b82;
+    }
+    .periodo-experiencia {
+      display: inline-block;
+      color: #9d456b;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .etapa-experiencia h3 {
+      color: #713f56;
+      font-size: 21px;
+      margin-bottom: 4px;
+    }
+    .etapa-experiencia h4 {
+      color: #9d456b;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .etapa-experiencia p {
+      max-width: 780px;
+      color: #806b77;
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+    .contacto {
+      max-width: 1300px;
+      margin: auto;
+      padding: 35px 24px 65px;
+      text-align: center;
+      scroll-margin-top: 100px;
+    }
+    .contacto h2 {
+      font-size: 28px;
+      color: #713f56;
+      margin-bottom: 8px;
+    }
+    .contacto p {
+      color: #806b77;
+      margin-bottom: 28px;
+    }
+    .enlaces-contacto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .enlaces-contacto a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #713f56;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 10px 4px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .enlaces-contacto a:hover {
+      color: #c05b82;
+      border-bottom-color: #c05b82;
+    }
+    .icono-contacto {
+      width: 23px;
+      height: 23px;
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+    .enlaces-contacto a:focus-visible {
+      outline: 3px solid #9d456b;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #f3dce4;
+      color: #806b77;
+      font-size: 13px;
+      background: #fff;
+    }
+    @media (max-width: 1000px) {
+      header {
+        padding: 15px 5%;
+      }
+      nav {
+        gap: 18px;
+      }
+      .menu {
+        gap: 17px;
+      }
+      .menu a {
+        font-size: 13px;
+      }
+      .rejilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .grupos-habilidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+    }
+    @media (max-width: 760px) {
+      header {
+        padding: 14px 5%;
+      }
+      nav {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 20px;
+      }
+      .menu a {
+        padding: 5px 0;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 45px 24px;
+      }
+      .hero-contenido {
+        margin: auto;
+        text-align: center;
+      }
+      .hero p {
+        margin: auto;
+      }
+      .hero-foto {
+        width: min(72vw, 280px);
+        grid-row: 1;
+      }
+    }
+    @media (max-width: 600px) {
+      html {
+        scroll-padding-top: 130px;
+      }
+      header {
+        padding: 12px 5%;
+      }
+      .logo {
+        font-size: 20px;
+      }
+      .menu {
+        gap: 3px 16px;
+      }
+      .menu a {
+        font-size: 12px;
+      }
+      h1 {
+        font-size: clamp(32px, 8vw, 40px);
+      }
+      .hero {
+        padding: 35px 24px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .proyectos {
+        padding: 30px 24px 40px;
+      }
+      .rejilla {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .grupos-habilidades {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .etapa-experiencia h3 {
+        font-size: 19px;
+      }
+      .linea-tiempo {
+        padding-left: 25px;
+      }
+      .etapa-experiencia::before {
+        left: -34px;
+      }
+      .enlaces-contacto {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+    .proyecto p {
+        text-align: justify;
+    }
+    .etapa-experiencia p {
+        text-align: justify;
+        }
+    .contenido p {
+        text-align: justify;
+    }
+    .experiencia-intro {
+        text-align: justify;
+    }
+    
+    .etapa-experiencia p {
+        text-align: justify;
+    }
