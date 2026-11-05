@@ -11,6 +11,7 @@ El portafolio reúne proyectos web, sistemas de gestión y aplicaciones Android,
 - **Proyectos web:** sitios web, aplicaciones interactivas y videojuegos.
 - **Sistemas:** aplicaciones para la gestión de información y automatización de procesos.
 - **Aplicaciones Android:** proyectos móviles desarrollados con Kotlin.
+- **Credenciales y certificaciones:** reconocimientos digitales y formación complementaria obtenidos mediante plataformas como IBM SkillsBuild.
 - **Habilidades:** tecnologías y herramientas que utilizo.
 - **Experiencia práctica:** proyectos y actividades realizadas durante mi formación profesional.
 
