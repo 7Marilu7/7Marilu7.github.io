@@ -548,77 +548,78 @@
         text-align: justify;
     } 
 
-    /* CREDENCIALES */
-
-.credenciales {
-  padding: 65px 8%;
-}
-
-.rejilla-credenciales {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 22px;
-  margin-top: 30px;
-}
-
-.tarjeta-credencial {
-  width: 210px;
-  padding: 18px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 14px;
-  text-align: left;
-  transition: transform 0.3s ease,
-              box-shadow 0.3s ease;
-}
-
-.tarjeta-credencial:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-.credencial-imagen {
-  width: 115px;
-  height: 115px;
-  margin: 0 auto 15px;
-}
-
-.credencial-imagen img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.credencial-info h3 {
-  font-size: 0.95rem;
-  margin-bottom: 5px;
-  line-height: 1.4;
-}
-
-.credencial-info span {
-  display: block;
-  font-size: 0.8rem;
-  color: #666;
-}
-
-.credencial-info p {
-  font-size: 0.75rem;
-  margin: 12px 0;
-  color: #666;
-}
-
-.boton-credencial {
-  display: inline-block;
-  padding: 7px 11px;
-  font-size: 0.75rem;
-  border-radius: 6px;
-  background: #5266a5;
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.boton-credencial:hover {
-  background: #394d89;
-}
+      .credenciales {
+        padding: 65px 8%;
+      }
+      
+      .rejilla-credenciales {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 22px;
+        margin-top: 30px;
+      }
+      
+      .tarjeta-credencial {
+        width: 210px;
+        padding: 18px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 14px;
+        text-align: left;
+        transition: transform 0.3s ease,
+                    box-shadow 0.3s ease;
+      }
+      
+      .tarjeta-credencial:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+      
+      .credencial-imagen {
+        width: 115px;
+        height: 115px;
+        margin: 0 auto 15px;
+      }
+      
+      .credencial-imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      
+      .credencial-info h3 {
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+        line-height: 1.4;
+      }
+      
+      .credencial-info span {
+        display: block;
+        font-size: 0.8rem;
+        color: #666;
+      }
+      
+      .credencial-info p {
+        font-size: 0.75rem;
+        margin: 12px 0;
+        color: #666;
+      }
+      .credencial-info {
+        text-align: center;
+      }
+      
+      .boton-credencial {
+        display: inline-block;
+        padding: 7px 11px;
+        font-size: 0.75rem;
+        border-radius: 6px;
+        background: #F3CFFF;
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+      
+      .boton-credencial:hover {
+        background: #394d89;
+      }
