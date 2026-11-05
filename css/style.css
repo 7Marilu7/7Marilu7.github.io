@@ -678,3 +678,9 @@
     padding: 7px 8px;
   }
 }
+/* Ocultar Credencial en teléfonos */
+@media (max-width: 768px) {
+    .menu-credencial {
+        display: none;
+    }
+}
