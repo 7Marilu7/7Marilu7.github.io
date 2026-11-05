@@ -547,61 +547,78 @@
     .etapa-experiencia p {
         text-align: justify;
     } 
-      .credenciales {
-        padding: 65px 8%;
-      }
-      
-      .tarjeta-credencial {
-        max-width: 650px;
-        margin: 30px auto 0;
-        padding: 25px;
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-      }
-      
-      .credencial-imagen {
-        flex-shrink: 0;
-        width: 125px;
-      }
-      
-      .credencial-imagen img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
-      
-      .credencial-info {
-        flex: 1;
-      }
-      
-      .credencial-emisor {
-        font-size: 0.85rem;
-        color: #5266a5;
-        font-weight: 600;
-      }
-      
-      .credencial-info h3 {
-        margin: 8px 0;
-      }
-      
-      .credencial-info p {
-        margin-bottom: 18px;
-        line-height: 1.6;
-      }
-      
-      @media (max-width: 600px) {
-        .tarjeta-credencial {
-          flex-direction: column;
-          text-align: center;
-        }
-      
-        .credencial-imagen {
-          width: 110px;
-        }
-      }
 
+    /* CREDENCIALES */
 
+.credenciales {
+  padding: 65px 8%;
+}
+
+.rejilla-credenciales {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.tarjeta-credencial {
+  width: 210px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  text-align: left;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.tarjeta-credencial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.credencial-imagen {
+  width: 115px;
+  height: 115px;
+  margin: 0 auto 15px;
+}
+
+.credencial-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.credencial-info h3 {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.credencial-info span {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.credencial-info p {
+  font-size: 0.75rem;
+  margin: 12px 0;
+  color: #666;
+}
+
+.boton-credencial {
+  display: inline-block;
+  padding: 7px 11px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  background: #5266a5;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.boton-credencial:hover {
+  background: #394d89;
+}
