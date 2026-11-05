@@ -623,3 +623,68 @@
       .boton-credencial:hover {
         background: #394d89;
       }
+      @media (max-width: 768px) {
+        .menu-credenciales {
+          display: none;
+        }
+      }
+/* Tablets */
+@media (max-width: 768px) {
+  .credenciales {
+    padding: 50px 6%;
+  }
+
+  .rejilla-credenciales {
+    gap: 18px;
+  }
+
+  .tarjeta-credencial {
+    width: 200px;
+    padding: 16px;
+  }
+
+  .credencial-imagen {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .credenciales {
+    padding: 40px 5%;
+  }
+
+  .rejilla-credenciales {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .tarjeta-credencial {
+    width: 100%;
+    max-width: 260px;
+    padding: 18px;
+  }
+
+  .credencial-imagen {
+    width: 105px;
+    height: 105px;
+  }
+
+  .credencial-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .credencial-info span {
+    font-size: 0.78rem;
+  }
+
+  .credencial-info p {
+    font-size: 0.75rem;
+  }
+
+  .boton-credencial {
+    font-size: 0.78rem;
+    padding: 8px 12px;
+  }
+}
