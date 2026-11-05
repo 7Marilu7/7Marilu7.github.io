@@ -548,143 +548,133 @@
         text-align: justify;
     } 
 
-      .credenciales {
-        padding: 65px 8%;
-      }
-      
-      .rejilla-credenciales {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 22px;
-        margin-top: 30px;
-      }
-      
-      .tarjeta-credencial {
-        width: 210px;
-        padding: 18px;
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 14px;
-        text-align: left;
-        transition: transform 0.3s ease,
-                    box-shadow 0.3s ease;
-      }
-      
-      .tarjeta-credencial:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-      }
-      
-      .credencial-imagen {
-        width: 115px;
-        height: 115px;
-        margin: 0 auto 15px;
-      }
-      
-      .credencial-imagen img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-      
-      .credencial-info h3 {
-        font-size: 0.95rem;
-        margin-bottom: 5px;
-        line-height: 1.4;
-      }
-      
-      .credencial-info span {
-        display: block;
-        font-size: 0.8rem;
-        color: #666;
-      }
-      
-      .credencial-info p {
-        font-size: 0.75rem;
-        margin: 12px 0;
-        color: #666;
-      }
-      .credencial-info {
-        text-align: center;
-      }
-      
-      .boton-credencial {
-        display: inline-block;
-        padding: 7px 11px;
-        font-size: 0.75rem;
-        border-radius: 6px;
-        background: #B395BD;
-        color: #fff;
-        text-decoration: none;
-        transition: background 0.3s ease;
-      }
-      
-      .boton-credencial:hover {
-        background: #394d89;
-      }
-      @media (max-width: 768px) {
-        .menu-credenciales {
-          display: none;
-        }
-      }
+    .credenciales {
+  max-width: 1300px;
+  margin: auto;
+  padding: 35px 24px 55px;
+  scroll-margin-top: 100px;
+}
+
+.rejilla-credenciales {
+  display: grid;
+  grid-template-columns: repeat(3, 210px);
+  gap: 22px;
+  margin-top: 30px;
+  justify-content: start;
+}
+
+.tarjeta-credencial {
+  width: 210px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-credencial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.credencial-imagen {
+  width: 115px;
+  height: 115px;
+  margin: 0 auto 15px;
+}
+
+.credencial-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.credencial-info {
+  text-align: center;
+}
+
+.credencial-info h3 {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.credencial-info span {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.credencial-info p {
+  font-size: 0.75rem;
+  margin: 12px 0;
+  color: #666;
+}
+
+.boton-credencial {
+  display: inline-block;
+  padding: 7px 11px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  background: #B395BD;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.boton-credencial:hover {
+  background: #394d89;
+}
+
 /* Tablets */
 @media (max-width: 768px) {
   .credenciales {
-    padding: 50px 6%;
+    padding: 35px 24px 45px;
   }
 
   .rejilla-credenciales {
+    grid-template-columns: repeat(2, 210px);
     gap: 18px;
-  }
-
-  .tarjeta-credencial {
-    width: 200px;
-    padding: 16px;
-  }
-
-  .credencial-imagen {
-    width: 110px;
-    height: 110px;
   }
 }
 
 /* Celulares */
 @media (max-width: 480px) {
   .credenciales {
-    padding: 40px 5%;
+    padding: 30px 16px 40px;
   }
 
   .rejilla-credenciales {
-    justify-content: center;
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 
   .tarjeta-credencial {
     width: 100%;
-    max-width: 260px;
-    padding: 18px;
+    min-width: 0;
+    padding: 12px 8px;
   }
 
   .credencial-imagen {
-    width: 105px;
-    height: 105px;
+    width: 85px;
+    height: 85px;
   }
 
   .credencial-info h3 {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
 
   .credencial-info span {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
   }
 
   .credencial-info p {
-    font-size: 0.75rem;
+    font-size: 0.68rem;
   }
 
   .boton-credencial {
-    font-size: 0.78rem;
-    padding: 8px 12px;
+    font-size: 0.68rem;
+    padding: 7px 8px;
   }
 }
