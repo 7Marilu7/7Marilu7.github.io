@@ -151,11 +151,12 @@
       color: #806b77;
       margin-top: 5px;
     }
-    .rejilla {
+   .rejilla {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-    }
+      gap: 28px;
+      padding: 0 8px;
+      }
     .tarjeta {
       min-width: 0;
       background: #fff;
