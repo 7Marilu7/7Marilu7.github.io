@@ -137,7 +137,7 @@
     .proyectos {
       max-width: 1300px;
       margin: auto;
-      padding: 35px 24px 55px;
+      padding: 25px 24px 35px;
       scroll-margin-top: 100px;
     }
     .encabezado {
@@ -271,7 +271,7 @@
     .habilidades {
       max-width: 1300px;
       margin: auto;
-      padding: 35px 24px 55px;
+      padding: 25px 24px 35px;
       scroll-margin-top: 100px;
     }
      .grupos-habilidades {
@@ -356,7 +356,7 @@
     .experiencia {
       max-width: 1300px;
       margin: auto;
-      padding: 35px 24px 60px;
+      padding: 25px 24px 40px;
       scroll-margin-top: 100px;
     }
     .experiencia-intro {
@@ -419,7 +419,7 @@
     .contacto {
       max-width: 1300px;
       margin: auto;
-      padding: 35px 24px 65px;
+      padding: 25px 24px 45px;
       text-align: center;
       scroll-margin-top: 100px;
     }
@@ -658,7 +658,7 @@
     .credenciales {
   max-width: 1300px;
   margin: auto;
-  padding: 35px 24px 55px;
+  padding: 25px 24px 35px;
   scroll-margin-top: 100px;
 }
 
