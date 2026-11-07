@@ -793,3 +793,10 @@
         display: none;
     }
 }
+/* Ajuste de espaciado en habilidades para computadora */
+@media (min-width: 1001px) {
+    .habilidades {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
