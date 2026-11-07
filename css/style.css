@@ -274,13 +274,12 @@
       padding: 35px 24px 55px;
       scroll-margin-top: 100px;
     }
-
       .grupos-habilidades {
           display: grid;
           grid-template-columns: repeat(4, minmax(0, 1fr));
           gap: 18px;
+          padding: 0 8px;
       }
-      
       .grupo-habilidad {
           min-width: 0;
           padding: 20px 15px;
@@ -793,10 +792,4 @@
         display: none;
     }
 }
-/* Ajuste de espaciado en habilidades para computadora */
-@media (min-width: 1001px) {
-    .habilidades {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
+
