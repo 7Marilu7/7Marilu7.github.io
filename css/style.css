@@ -274,19 +274,18 @@
       padding: 35px 24px 55px;
       scroll-margin-top: 100px;
     }
-      .grupos-habilidades {
-          display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          gap: 18px;
-          padding: 0 8px;
+     .grupos-habilidades {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
       }
-      .grupo-habilidad {
-          min-width: 0;
-          padding: 20px 15px;
-          background: #fff;
-          border: 1px solid #f0d9e2;
-          border-radius: 16px;
-          transition: transform 0.2s, box-shadow 0.2s;
+     .grupo-habilidad {
+        min-width: 0;
+        padding: 16px 12px;
+        background: #fff;
+        border: 1px solid #f0d9e2;
+        border-radius: 16px;
+        transition: transform 0.2s, box-shadow 0.2s;
       }
       
       .grupo-habilidad:hover {
@@ -492,14 +491,14 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .grupos-habilidades {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
       }
       
       .grupo-habilidad {
-          padding: 20px;
+         padding: 14px 12px;
       }
-      
+            
       .grupo-habilidad h3 {
           font-size: 18px;
       }
@@ -576,12 +575,12 @@
       }
       
       .grupos-habilidades {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
       }
       
       .grupo-habilidad {
-          padding: 12px 9px;
+        padding: 10px 8px;
       }
       
       .grupo-habilidad h3 {
