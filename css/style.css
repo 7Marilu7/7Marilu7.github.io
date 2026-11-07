@@ -274,38 +274,87 @@
       padding: 35px 24px 55px;
       scroll-margin-top: 100px;
     }
-    .grupos-habilidades {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 32px;
-    }
-    .grupo-habilidad {
-      padding: 8px 0 18px;
-      border-bottom: 2px solid #f0d9e2;
-    }
-    .grupo-habilidad h3 {
-      color: #713f56;
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-    .grupo-habilidad p {
-      color: #806b77;
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-    .lista-habilidades {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .lista-habilidades span {
-      display: inline-block;
-      background: #fff0f5;
-      color: #87546b;
-      padding: 6px 11px;
-      border-radius: 6px;
-      font-size: 12px;
-    }
+
+      .grupos-habilidades {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 18px;
+      }
+      
+      .grupo-habilidad {
+          min-width: 0;
+          padding: 20px 15px;
+          background: #fff;
+          border: 1px solid #f0d9e2;
+          border-radius: 16px;
+          transition: transform 0.2s, box-shadow 0.2s;
+      }
+      
+      .grupo-habilidad:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 10px 25px #9d456b14;
+      }
+      
+      .grupo-habilidad h3 {
+          color: #713f56;
+          font-size: 17px;
+          line-height: 1.4;
+          margin-bottom: 6px;
+      }
+      
+      .grupo-habilidad p {
+          color: #806b77;
+          font-size: 12px;
+          margin-bottom: 18px;
+      }
+      
+      .lista-habilidades {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 10px;
+      }
+      
+      .habilidad-item {
+          min-width: 0;
+          min-height: 88px;
+          padding: 10px 5px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          background: #fff8fa;
+          border: 1px solid #f3dce4;
+          border-radius: 11px;
+          text-align: center;
+          transition: background 0.2s, transform 0.2s;
+      }
+      
+      .habilidad-item:hover {
+          background: #fff0f5;
+          transform: translateY(-3px);
+      }
+      
+      .habilidad-item img {
+          width: 32px;
+          height: 32px;
+          object-fit: contain;
+      }
+      
+      .habilidad-item span {
+          color: #87546b;
+          font-size: 11px;
+          font-weight: 600;
+          line-height: 1.35;
+          overflow-wrap: anywhere;
+      }
+      
+      .habilidad-item .icono-habilidad {
+          font-size: 27px;
+          color: #9d456b;
+          line-height: 32px;
+      }
+
     .experiencia {
       max-width: 1300px;
       margin: auto;
@@ -444,8 +493,20 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .grupos-habilidades {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 18px;
+      }
+      
+      .grupo-habilidad {
+          padding: 20px;
+      }
+      
+      .grupo-habilidad h3 {
+          font-size: 18px;
+      }
+      
+      .lista-habilidades {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
     @media (max-width: 760px) {
@@ -514,10 +575,51 @@
         grid-template-columns: 1fr;
         gap: 20px;
       }
+      
       .grupos-habilidades {
-        grid-template-columns: 1fr;
-        gap: 18px;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 10px;
       }
+      
+      .grupo-habilidad {
+          padding: 12px 9px;
+      }
+      
+      .grupo-habilidad h3 {
+          font-size: 14px;
+          line-height: 1.3;
+      }
+      
+      .grupo-habilidad p {
+          font-size: 10px;
+          margin-bottom: 12px;
+      }
+      
+      .lista-habilidades {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 7px;
+      }
+      
+      .habilidad-item {
+          min-height: 76px;
+          padding: 7px 3px;
+          gap: 6px;
+      }
+      
+      .habilidad-item img {
+          width: 27px;
+          height: 27px;
+      }
+      
+      .habilidad-item span {
+          font-size: 10px;
+      }
+      
+      .habilidad-item .icono-habilidad {
+          font-size: 24px;
+          line-height: 27px;
+      }
+
       .etapa-experiencia h3 {
         font-size: 19px;
       }
