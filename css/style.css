@@ -638,6 +638,13 @@
     .etapa-experiencia p {
         text-align: justify;
     } 
+      .encabezado p {
+          text-align: justify;
+      }
+      .encabezado h2 {
+          font-size: 22px;
+      }
+
 
     .credenciales {
   max-width: 1300px;
