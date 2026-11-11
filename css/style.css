@@ -274,84 +274,129 @@
       padding: 25px 24px 35px;
       scroll-margin-top: 100px;
     }
-     .grupos-habilidades {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+    /* =================================
+   NUEVO DISEÑO DE HABILIDADES
+================================= */
+
+.grupos-habilidades {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 16px;
+}
+
+.grupo-habilidad {
+    min-width: 0;
+    padding: 20px 18px;
+    background: #fff;
+    border: 1px solid #f0d9e2;
+    border-radius: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grupo-habilidad:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px #9d456b14;
+}
+
+.grupo-habilidad h3 {
+    color: #713f56;
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 7px;
+}
+
+.grupo-habilidad p {
+    color: #806b77;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* Lista sencilla de habilidades */
+.lista-habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.habilidad-item {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #87546b;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.45;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.habilidad-item::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: #c05b82;
+}
+
+/* Tablets */
+@media (max-width: 1000px) {
+    .grupos-habilidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
-      }
-     .grupo-habilidad {
-        min-width: 0;
-        padding: 16px 12px;
-        background: #fff;
-        border: 1px solid #f0d9e2;
-        border-radius: 16px;
-        transition: transform 0.2s, box-shadow 0.2s;
-      }
-      
-      .grupo-habilidad:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 10px 25px #9d456b14;
-      }
-      
-      .grupo-habilidad h3 {
-          color: #713f56;
-          font-size: 16px;
-          line-height: 1.4;
-          margin-bottom: 6px;
-      }
-      
-      .grupo-habilidad p {
-          color: #806b77;
-          font-size: 12px;
-          margin-bottom: 18px;
-      }
-      
-      .lista-habilidades {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 10px;
-      }
-      
-      .habilidad-item {
-          min-width: 0;
-          min-height: 88px;
-          padding: 10px 5px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          background: #fff8fa;
-          border: 1px solid #f3dce4;
-          border-radius: 11px;
-          text-align: center;
-          transition: background 0.2s, transform 0.2s;
-      }
-      
-      .habilidad-item:hover {
-          background: #fff0f5;
-          transform: translateY(-3px);
-      }
-      
-      .habilidad-item img {
-          width: 32px;
-          height: 32px;
-          object-fit: contain;
-      }
-      
-      .habilidad-item span {
-          color: #87546b;
-          font-size: 11px;
-          font-weight: 600;
-          line-height: 1.35;
-          overflow-wrap: anywhere;
-      }
-      
-      .habilidad-item .icono-habilidad {
-          font-size: 27px;
-          color: #9d456b;
-          line-height: 32px;
-      }
+    }
+
+    .grupo-habilidad {
+        padding: 18px 16px;
+    }
+}
+
+/* Teléfonos */
+@media (max-width: 600px) {
+    .grupos-habilidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .grupo-habilidad {
+        padding: 14px 11px;
+    }
+
+    .grupo-habilidad h3 {
+        font-size: 14px;
+    }
+
+    .grupo-habilidad p {
+        font-size: 10px;
+        margin-bottom: 12px;
+    }
+
+    .lista-habilidades {
+        gap: 8px;
+    }
+
+    .habilidad-item {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .habilidad-item::before {
+        width: 6px;
+        height: 6px;
+        min-width: 6px;
+        margin-top: 5px;
+    }
+}
 
     .experiencia {
       max-width: 1300px;
@@ -490,22 +535,6 @@
       .rejilla {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-      .grupos-habilidades {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-      }
-      
-      .grupo-habilidad {
-         padding: 14px 12px;
-      }
-            
-      .grupo-habilidad h3 {
-          font-size: 18px;
-      }
-      
-      .lista-habilidades {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
     }
     @media (max-width: 760px) {
       header {
@@ -573,51 +602,6 @@
         grid-template-columns: 1fr;
         gap: 20px;
       }
-      
-      .grupos-habilidades {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-      }
-      
-      .grupo-habilidad {
-        padding: 10px 8px;
-      }
-      
-      .grupo-habilidad h3 {
-          font-size: 14px;
-          line-height: 1.3;
-      }
-      
-      .grupo-habilidad p {
-          font-size: 10px;
-          margin-bottom: 12px;
-      }
-      
-      .lista-habilidades {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 7px;
-      }
-      
-      .habilidad-item {
-          min-height: 76px;
-          padding: 7px 3px;
-          gap: 6px;
-      }
-      
-      .habilidad-item img {
-          width: 27px;
-          height: 27px;
-      }
-      
-      .habilidad-item span {
-          font-size: 10px;
-      }
-      
-      .habilidad-item .icono-habilidad {
-          font-size: 24px;
-          line-height: 27px;
-      }
-
       .etapa-experiencia h3 {
         font-size: 19px;
       }
@@ -733,8 +717,6 @@
 .boton-credencial:hover {
   background: #394d89;
 }
-
-/* Tablets */
 @media (max-width: 768px) {
   .credenciales {
     padding: 35px 24px 45px;
@@ -746,7 +728,6 @@
   }
 }
 
-/* Celulares */
 @media (max-width: 480px) {
   .credenciales {
     padding: 30px 16px 40px;
@@ -791,4 +772,3 @@
         display: none;
     }
 }
-
